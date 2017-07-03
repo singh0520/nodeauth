@@ -1,7 +1,7 @@
 extends layout
 
 block content
-		h1 register
+		h1 Register
 		p Please register using the form below
 		ul.errors
 			if errors
@@ -9,16 +9,16 @@ block content
 					li.alert.alert-danger #{error.msg}
 		form(method='post', action='/users/register', enctype='multipart/form-data')
 			.form-group
-				label name
-				input.form-control(name='email', type='email', placeholder = 'Enter email')
-			.form-group
-				label Email
+				label Name
 				input.form-control(name='name', type='text', placeholder = 'Enter Name')
 			.form-group
-				label username
+				label Email
+				input.form-control(name='email', type='email', placeholder = 'Enter Email')
+			.form-group
+				label Username
 				input.form-control(name='username', type='text', placeholder = 'Enter username')
 			.form-group
-				label password
+				label Password
 				input.form-control(name='password', type='password', placeholder = 'Enter password')
 			.form-group
 				label confirm password
